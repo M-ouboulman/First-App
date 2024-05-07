@@ -1,0 +1,41 @@
+<div class="logo" title="Google Public DNS">
+  <div class="logo-text">
+    <span>Public DNS</span>
+  </div>
+</div>
+<div class="form-container">
+  <form action="/query" method="GET">
+    <div class="row">
+      <label class="matter-textfield-outlined">
+        <input type="text" name="name" placeholder="&nbsp;" />
+        <span>Domain Name</span>
+      </label>
+      <label class="matter-textfield-outlined1">
+        <input type="text" name="rr_type" list="rr_types" placeholder="&nbsp;" size="10"/>
+        <span>RR Type</span>
+        <datalist id="rr_types">
+          <option value="A">A</option>
+          <option value="AAAA">AAAA</option>
+          <option value="CNAME">CNAME</option>
+          <option value="MX">MX</option>
+          <option value="NS">NS</option>
+          <option value="SOA">SOA</option>
+          <option value="TXT">TXT</option>
+          <option value="SRV">SRV</option>
+        </datalist>
+      </label>
+      <button class="matter-button-contained matter-primary" type="submit">
+        Flush Cashe
+      </button>
+    </div>
+  </form>
+</div>
+<footer>
+  <div style="flex-grow: 1">
+    <a href="https://developers.google.com/speed/public-dns">Help</a>
+    <a (click)="goToCasheFlush()" class="cashe-flush-link" title="cashe-flush">Cashe Flush</a>
+  </div>
+  <a href="https://developers.google.com/speed/public-dns/docs/using">
+    Get Started with Google Public DNS
+  </a>
+</footer>

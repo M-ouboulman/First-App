@@ -1,0 +1,123 @@
+<div class="logo" title="Google Public DNS">
+  <div class="logo-text">
+    <span>Public DNS</span>
+  </div>
+</div>
+<div class="form-container">
+  <div class="input-button-container">
+    <label class="matter-textfield-outlined">
+      <input type="text" placeholder="&nbsp;" />
+      <span>DNS Name</span>
+    </label>
+    <button class="matter-button-contained matter-primary">Resolve</button>
+  </div>
+</div>
+<div class="gray-frame">
+  <div class="main-container">
+    <div class="left-content">
+      <label class="matter-textfield-outlined1">
+        <input
+          type="text"
+          value="A"
+          name="rr_type"
+          list="rr_types"
+          placeholder="&nbsp;"
+          size="10"
+        />
+        <span>RR Type</span>
+        <datalist id="rr_types">
+          <option value="A"></option>
+          <option value="AAAA"></option>
+          <option value="ALL"></option>
+          <option value="CAA"></option>
+          <option value="CDNSKEY"></option>
+          <option value="CDS"></option>
+          <option value="CERT"></option>
+          <option value="CNAME"></option>
+          <option value="DNAME"></option>
+          <option value="DNSKEY"></option>
+          <option value="DS"></option>
+          <option value="HINFO"></option>
+          <option value="HTTPS"></option>
+          <option value="INTEGRITY"></option>
+          <option value="IPSECKEY"></option>
+          <option value="KEY"></option>
+          <option value="MX"></option>
+          <option value="NAPTR"></option>
+          <option value="NS"></option>
+          <option value="NSEC"></option>
+          <option value="NSEC3"></option>
+          <option value="NSEC3PARAM"></option>
+          <option value="PTR"></option>
+          <option value="RP"></option>
+          <option value="RRSIG"></option>
+          <option value="SIG"></option>
+          <option value="SOA"></option>
+          <option value="SPF"></option>
+          <option value="SRV"></option>
+          <option value="SSHFP"></option>
+          <option value="SVCB"></option>
+          <option value="TLSA"></option>
+          <option value="TXT"></option>
+          <option value="WKS"></option>
+        </datalist>
+      </label>
+      <hr />
+      <label class="matter-textfield-outlined2">
+        <input type="text" placeholder="&nbsp;" />
+        <span>EDNS Client Subnet</span>
+      </label>
+      <hr />
+      <div class="checkbox-wrapper">
+        <input type="checkbox" class="custom-checkbox" id="custom-switch" />
+        <label for="custom-switch">Disable DNSSEC validation</label>
+      </div>
+      <hr />
+      <div class="checkbox-wrapper">
+        <input type="checkbox" class="custom-checkbox" id="custom-switch" />
+        <label for="custom-switch">Show DNSSEC detail</label>
+      </div>
+    </div>
+    <div class="right-content">
+      <h2 style="font-size: 25px">
+        Result for 8.8.8.8.in-addr.arpa/PTR with DNSSEC validation and without
+        DNSSEC detail:
+      </h2>
+      <pre class="output" id="results">
+        {{ "{" }}
+            "Status": 0 /* NOERROR */,  
+            "TC": false,   
+            "RD": true,  
+            "RA": true,  
+            "AD": false,  
+            "CD": false,  
+            "Question": [   
+              {{ "{" }}
+                "name": "8.8.8.8.in-addr.arpa.",      
+                "type": 12 /* PTR */,
+              {{ "}" }}  
+            ],
+            "Answer": [    
+              {{ "{" }}      
+                "name": "8.8.8.8.in-addr.arpa.",      
+                "type": 12 /* PTR */,   
+                "TTL": 7753, 
+                "data": "dns.google.",    
+              {{ "}" }}
+            ]
+        {{ "}" }}
+    </pre
+      >
+    </div>
+  </div>
+  <p> You may also resolve directly at: <a href="https://dns.google/resolve?name=8.8.8.8.in-addr.arpa&amp;type=PTR">https://dns.google/resolve?name=8.8.8.8.in-addr.arpa&amp;type=PTR</a> </p>
+</div>
+<footer>
+    <div style="flex-grow: 1">
+      <a href="https://developers.google.com/speed/public-dns">Help</a>
+      <a (click)="goToCasheFlush()" class="cashe-flush-link" title="cashe-flush">Cashe Flush</a>
+    </div>
+    <a href="https://developers.google.com/speed/public-dns/docs/using">
+      Get Started with Google Public DNS
+    </a>
+  </footer>

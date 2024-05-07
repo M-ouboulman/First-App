@@ -1,0 +1,31 @@
+<div class="logo" title="Google Public DNS">
+  <div class="logo-text">
+    <span>Public DNS</span>
+  </div>
+</div>
+<div class="form-container">
+  <form>
+    <div class="row">
+      <label class="matter-textfield-outlined">
+        <input type="text" placeholder="&nbsp;" />
+        <span>DNS Name</span>
+        <p class="help">
+          Enter a domain (like example.com) or IP address (like 8.8.8.8 or
+          2001:4860:4860::8844).
+        </p>
+      </label>
+      <button (click)="onResolve()" class="matter-button-contained matter-primary">
+        Resolve
+      </button>
+    </div>
+  </form>
+</div>
+
+<footer>
+  <div style="flex-grow: 1;">
+    <a href="https://developers.google.com/speed/public-dns">Help</a>
+    <a (click)="goToCasheFlush()" class="cashe-flush-link" title="cashe-flush">Cashe Flush</a>
+  </div>
+  <a href="https://developers.google.com/speed/public-dns/docs/using">Get Started with Google Public DNS</a>
+</footer>
+

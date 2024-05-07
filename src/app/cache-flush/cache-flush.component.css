@@ -1,0 +1,186 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    background: url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png) no-repeat;
+    background-size: contain;
+    height: 92px;
+    width: 272px;
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+  
+  /* Text within the logo */
+  .logo-text {
+    color: #4285f4;
+    font-size: 16px;
+    position: absolute;
+    left: 215px;
+    top: 76px;
+  }
+  
+  /* Form Container Layout */
+  .form-container {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Text Field Styling */
+  .matter-textfield-outlined {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .matter-textfield-outlined input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+  
+  .matter-textfield-outlined span {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    color: gray;
+  }
+  
+  .matter-textfield-outlined input:focus + span {
+    top: -1px;
+    background-color: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #4285f4;
+  }
+
+
+  /* Text Field Styling with Label that Floats on Focus */
+.matter-textfield-outlined1 {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.matter-textfield-outlined1 input {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  transition: padding-top 0.3s;
+}
+
+.matter-textfield-outlined1 span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: top 0.3s, transform 0.3s, font-size 0.3s;
+  color: gray;
+  background-color: transparent;
+}
+
+.matter-textfield-outlined1 input:focus + span,
+.matter-textfield-outlined1 input:not(:placeholder-shown) + span {
+  top: -12px;
+  transform: none;
+  font-size: 12px;
+  background-color: white;
+  padding: 0 5px;
+  color: #4285f4;
+}
+
+.matter-textfield-outlined1 input:focus {
+  padding-top: 16px;
+}
+
+  
+  
+  /* Button Styling */
+  .matter-button-contained {
+    background-color: #2b80cb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+  }
+  
+  .matter-button-contained:hover {
+    background-color: #1a5b99;
+  }
+  
+  /* Footer Styling */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #424242;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer a {
+    color: #03A9F4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+  
+  footer a:hover {
+    color: #050aff;
+    cursor: default;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 600px) {
+    .form-container {
+      padding-top: 100px;
+    }
+  
+    .matter-button-contained {
+      padding: 8px 12px;
+    }
+  
+    .logo {
+      height: 50px;
+      width: 150px;
+      top: 10px;
+    }
+  
+    .logo-text {
+      font-size: 12px;
+      left: 100px;
+      top: 60px;
+    }
+  
+    footer {
+      padding: 8px;
+    }
+  
+    footer a {
+      font-size: 12px;
+      margin: 0 10px;
+    }
+  }
+  
